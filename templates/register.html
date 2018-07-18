@@ -1,0 +1,75 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+{% from "includes/_formhelpers.html" import render_field %}
+<form method="POST">
+
+	<div class="signup">
+		<div class="signup-screen">
+			<div class="app-title">
+				<h1>Sign up</h1>
+			</div>
+
+			<!--showing input fields for account type, first name, last name, email, password 
+				and phonenumber-->
+	
+			<div class="form-group">
+				{{render_field(form.account, class_="form_control")}}
+			</div>
+		
+			<div class="form-group">
+				{{render_field(form.first_name, class_="form_control")}}
+			</div>
+
+			<div class="form-group">
+				{{render_field(form.last_name, class_="form_control")}}
+			</div>
+			
+			<div class="form-group">
+				{{render_field(form.email, class_="form_control")}}
+			</div>
+
+			<div class="form-group">
+				{{render_field(form.phone_number, class_="form_control")}}
+			</div>
+			
+			<div class="form-group">
+				{{render_field(form.password, class_="form_control")}}
+			</div>
+			
+			<div class="form-group">
+				{{render_field(form.confirm, class_="form_control")}}
+			</div>
+			<div class="form-group">
+				<input class="submit" type="submit" class"btn btn-primary" value="Submit">
+			</div>
+			<div class="clear">
+				
+			</div>
+		</div>
+
+	</div>
+
+</form> 
+
+
+
+{% endblock %}
+<!--
+	
+	<div >
+		<form class="mid-form">
+			<select type="button" name="" class="drop">
+				<option>landlord</option>
+				<option> tenant </option>
+				<option> user </option>
+			</select>
+			
+			<input type="input" name="Firstname" placeholder="Firstname" class="login-input">
+			<input type="input" name="SecondName" placeholder="Second Name" class="login-input">
+			<input type="email" name="email">
+			
+		</form>
+	</div>
+</div> -->

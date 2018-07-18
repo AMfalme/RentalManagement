@@ -1,0 +1,362 @@
+.page-bg{
+	background: url("../images/front.jpg");
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(12px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.page-bg::before{
+  background-color: rgba(79, 193, 32, 0.22);
+    content: "";
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.descript{
+	margin: 0 auto;
+    text-align: left;
+    width: 40%;
+}
+.down{
+	margin-top: 120px;
+	z-index: 9999;
+}
+.button-success{
+	background: rgba(0, 128, 0, 0.6);
+    border-radius: 2px;
+    width: 110px;
+    height: 40px;
+
+}
+.flash{
+	width: 60%;
+	text-align: center;
+}
+.signup-screen .help-inline{
+	color: red;
+    margin-left: 180px;
+}
+
+.signup{
+	
+}
+
+.signup-screen{
+	background-color: rgba(114, 120, 14, 0.44);
+	width: 45%;
+	margin: 20px auto;
+	border: 1px solid rgba(54, 149, 70, 0.37);
+	border-radius: 24px;
+	padding: 30	px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+}
+.submit{
+width: 20% !important;
+margin-right: 100px !important;
+}
+.clear{
+	clear: both;
+	margin:20px auto;
+}
+
+}
+.login{
+	
+	
+  background-size: contain;
+}
+
+.login-screen {
+	background-color: rgba(114, 120, 14, 0.44);
+    width: 40%;
+    margin: 20px auto;
+    border-radius: 24px;
+    padding: 30px;
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+    height: 298px;
+    padding-left: 0px;
+
+}
+*, ::after, ::before {
+
+    box-sizing: border-box;
+
+}
+ 
+.app-title {
+text-align: center;
+color: #110c0c;
+}
+ 
+.login-form {
+text-align: center;
+}
+
+.form-group {
+margin-bottom: 10px;
+}
+.form-group label{
+	margin-left: 45px;
+}
+.form-group input, .form-group select{
+	margin-right: 30px;
+	float: right;
+	border-radius: 4px;
+	width: 50%;
+}
+.drop{
+	display: block;
+	width: 80%;
+
+}
+
+.login-input{
+	display: block;
+	width: 80% !important;;
+}
+.login-input, .drop{
+	margin: 5px; 
+}
+
+
+.admin-pic{
+  width: 100%;
+  
+
+}
+.admin h4{
+  color: burlywood;
+  font-weight: 800;
+  padding: 20px;
+  background-color: rgba(20, 78, 20, 0.8);
+  margin: 10px 0;
+  margin-left: 0px;
+  font-size: 16px;
+  width: 117%;
+  margin-left: -40px;
+}
+.users-dashboard{
+  background-image: url('../images/users.png');
+  
+  
+  
+
+}
+.rental-dashboard{
+  color: #fff;
+  background: url('../images/rentals.jpeg');
+}
+
+.dashboard{
+  margin-bottom: 40px; 
+  background-size: contain;
+  width: 45%;
+
+height: 150px;
+display: inline-block;
+position: relative;
+
+
+
+display: inline-block;
+
+margin-right: 2%;
+}
+.dashboard h5{
+  color: #445f95;
+
+margin: 5px;
+}
+.rental-dashboard h5{
+  color: #fff;
+}
+.descr h5, .descr button{
+  display: inline;
+  color: #fff;
+  float: right;
+    margin: 5px;
+
+}
+.descr button{
+  background-color: rgba(8, 80, 118, 0.54);
+  color: #5f2222;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0;
+  color: #fff;
+
+}
+.descr span{
+  position: absolute;
+  bottom: 0;
+}
+
+.dashboard .descr::before{
+  position: absolute;bottom: 0;
+  right: 0;
+  background-color: rgba(8, 80, 118, 0.54);
+  width: 100%;
+  transition-duration: 2s;
+   -moz-transform: scale(0);
+
+}
+.dashboard:hover .descr::before{
+  top: 0;
+    transform: scale(1);
+  
+  bottom: 0;
+  left: 0;
+  content: '';
+}
+.dashboard:hover button{
+  background-color: rgba(255,255,255,1);
+  color: maroon;
+  
+}
+.dashboard-cover{
+  background-color: rgba(3, 18, 41, 0.74);
+  padding: 20px;
+}
+.manager-section{
+  background-color: rgba(20, 78, 20, 0.6);
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.dashboard-body{
+  margin-bottom: 20px;
+}
+.footer{
+  background-color: #085076;
+  padding: 50px;
+  margin-right: -20px;
+  margin-left: -20px;
+  width: 100%;
+}
+.side-menu ul li{
+  list-style: none;
+
+width: 100%;
+
+height: 55px;
+
+border: #fff 1px solid;
+border-radius: 2px;
+
+text-align: center;
+
+padding: 15px 0;
+
+margin: 4px;
+
+color: rgb(255,255,255);
+
+font-weight: 800;
+}
+.side-menu ul li a{
+  color: #fff;
+}
+.side-menu ul {
+  margin-left: -85px;
+}
+.jumbosparent{
+  background-color: rgba(238, 238, 238, 0.45);
+  border: 1px solid #eee;
+}
+.button-hover button{
+  border: 1px solid #fff;
+background-color: #296c1f;
+border-radius: 4px;
+padding: 10px;
+color: #fff;
+width: 200px;
+height: 50px;
+position: relative;
+cursor: pointer;
+}
+.button-hover button:hover::before{
+
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-weight: 900;
+    padding: 10px;
+    font-size: 15px;
+    content: "";
+    transition: .5s;
+    color:#000;
+    /*background-color: rgba(2, 238, 238,.6);*/
+    
+      transform: scaleY(1);
+
+
+}
+
+.button-hover button::before{
+  transform: scaleY(0);
+  height: 100%;
+  background-color: rgba(30, 69, 10, 0.55);
+  content: "";
+  color: #fff;
+  transition-duration: .5s;
+}
+.dashboard-icon .icon{
+  font-size: 50px;
+  color: green;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.dashboard-icon{
+  background-color: #fff;
+  width: 20%;
+  padding: 20px;
+  text-align: center;
+  transition: .5s;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-block;
+  min-height: 200px;
+  margin: 2%;
+
+}
+.dashboard-icon:hover .icon{
+  color: red;
+
+}
+.dashboard-icon:hover{
+  background-color: green;
+
+}
+.dashboard-icon:hover a{
+  color: #fff;
+  text-decoration: none;
+}
+.logout{
+  float: right;
+  background-color: red;
+}
+.logout .icon{
+  color: #fff;
+}
+.logout a{
+  color: #fff;
+}
+.logout_link{ float: right; }

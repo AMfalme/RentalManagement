@@ -1,0 +1,20 @@
+<!--messages when redirecting to a link -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+
+     <!--alerts whatever category we pass in -->
+      <div class="alert alert-{{ category }} success">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %} 
+
+<!--output the actual error when login fails-->
+{% if error %}
+<div class="alert alert-danger">{{error}}</div>
+{% endif %}
+
+<!-- success message -->
+{% if msg %}
+<div class="alert alert-success">{{msg}}</div>
+{% endif %}

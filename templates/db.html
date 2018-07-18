@@ -1,0 +1,64 @@
+<!--
+
+Multitenant MySQL Setup
+Nov 3, 2016 • databases
+
+It is much easier to make API/code multi-tenant, but it is a different story for databases. This problem exists at pretty much all SaaS based solutions, intending to provide data and service level isolation for many users/customers while trying to keep the code + database scalable. However, here are a few strategies that can be employed, based on the pros/cons and the freedom/constraints driving the solution.
+
+Use a tenant_id for each record
+How
+Single database running on single instance
+Every record has a tenant_id as a part of the composite primary key.
+Application will need to provide this tenant_id for every query as a part of the where clause
+Pros
+One database, one instance
+Relatively easy to run cross-tenant queries
+Relatively easier to manage and apply schema updates
+Cons
+No db level isolation of tenant data
+No option to support schema changes specific to a tenant
+Imbalance of tenants can adversely affect the DB performance, creating hotspots
+The sheer size and operation frequency increases the chances of db file corruption
+Will hit the file system size limits
+Trust the developer to provide the additional where condition
+Put every tenant in a separate db, same instance
+How
+Every tenant gets his schema, but runs under the same physical database server
+The tenant_id becomes the db name, so the queries do not change, but the connection string changes.
+Pros
+Managable dataset size per tenant
+Better control of any schema changes specific to a tenant, if needed.
+DB level isolation of tenant data
+Easier to roll out tenant specific code release as other tenants wont be affected by schema changes if the app servers are deployed separately per tenant.
+Cons
+Will need to apply schema changes to all such DBs, making coordination of code changes harder if dedicated app servers talk to the db.
+Will hit the system file size limits, as it is still 1 physical file
+The fact that there is only 1 physical file, there could be IO contention just like 1 db per instance
+Put every tenant in its own instance
+How
+Every tenant gets a provisioned hardware mysql instance
+The code will need to use separate connection strings, no impact to SQL
+Pros
+Complete physical isolation of tenant data
+Control of the DB instance size based on the load exerted by the tenant
+Predictable Disk IO performance, due to isolation of data usage patterns
+Can have customized DB schema changes to a tenant
+Easier to roll out tenant specific code release (if dedicated app servers talk to a specific db)
+Cons
+Each tenant DB instance is $$
+The cost quickly adds up with secondaries (standby) and read replicas if needed
+Same challenge with DB schema updates across all tenants
+
+
+MY NEW TABLES 
+-users 
+-rental manae=ager
+-tenant
+-residentials
+-commercial 
+-tenant
+
+
+
+
+-->

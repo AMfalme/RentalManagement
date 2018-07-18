@@ -1,0 +1,50 @@
+<!--_navbar used cause this is a partial file 
+//nav bootstrap starter template -->
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Tenant Management System</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li> <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+          </li>
+          {% if session['T'] %}
+          <li> <a class="nav-link" href="{{url_for('Tenant')}}">Dashboard   <span class="sr-only"></span></a>
+          </li>
+          {% endif %}
+           {% if session['RM'] %}
+          <li> <a class="nav-link" href="{{url_for('RentalManager')}}">Dashboard   <span class="sr-only"></span></a>
+          </li>
+          {% endif %}
+           {% if session['Admin'] %}
+          <li> <a class="nav-link" href="{{url_for('Admin')}}">Dashboard   <span class="sr-only"></span></a>
+          </li>
+          {% endif %}
+          
+          <li class="logout_link"> 
+          </li>
+          
+          
+          <!--<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/to let" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">To Let</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Residential</a>
+              <a class="dropdown-item" href="#">Commercial</a>
+            </div>
+          </li>-->
+        </ul>
+      </div>
+      <div class="right-sidemenu">
+        <ul class="navbar-nav">
+          {% if session['logged_in'] %}
+          <li>
+            <a class="nav-link" href="{{url_for('logout')}}"><i class="fas fa-sign-out-alt"></i>Logout   <span class="sr-only"></span></a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+    </nav>

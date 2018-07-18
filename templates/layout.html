@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>myTMS</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/custom.css') }}">
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/fontawesome/css/all.css') }}">
+		
+
+
+
+
+	</head>
+	<body>
+		{% include 'includes/_navbar.html' %}
+		<div class="container down">
+			<div class="page-bg"></div>
+		{% include 'includes/_messages.html' %}
+		{% block body %}{% endblock %}
+		</div>
+
+		<script src="js/bootstrap.min.js"></script>
+
+	</body>
+</html>

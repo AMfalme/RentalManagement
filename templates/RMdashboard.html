@@ -1,0 +1,145 @@
+<!-- this dashboard should have an icons to:
+
+	add tenants, 
+	view payments, 
+	view requests, 
+	send payment reminder, 
+
+
+	these buttons don't have to work for now, 
+	-->
+	{% extends 'layout.html' %}
+
+	{% block body %}
+
+		<div class="container-fluid dashboard-body">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="admin-pic">
+					<img src="../static/images/admin.jpg">
+					</div>
+					<div class="admin">
+						<h4>
+							Welcome, {{session['name']}}<br>
+							You are a Rental Manager
+						</h4>
+					</div>
+					<div class="side-menu">
+						<ul>
+							<li><a href="#">Homepage</a></li>
+							<li><a href="#">Homepage</a></li>
+							<li><a href="#">Homepage</a></li>
+							<li><a href="#">Homepage</a></li>
+							<li><a href="#">Homepage</a></li>
+							<li><a href="#">Homepage</a></li>
+							<li><a href="#">Homepage</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-9 dashboard-cover">
+					<div class="manager-section">
+						<div class="rental-dashboard dashboard">
+						
+								<h5>Appartments and OFfices</h5>
+							
+						<div class="descr">
+							
+							<span>
+							<button>
+								View Rentals
+							</button>
+							<button>
+								Add Appartment/Office
+							</button>
+							</span>
+						</div>
+					</div>
+					
+						<div class="users-dashboard dashboard">
+						
+								<h5>Tenants</h5>
+							
+						<div class="descr">
+							
+							<span>
+							<button>
+								View Tenants
+							</button>
+							<button>
+								Manage Tenants
+							</button>
+							</span>
+						</div>
+					</div>
+					</div>
+					<div class="dashboard-icon">
+						<i class="icon fas fa-user-alt"></i>
+						<div>
+							<a href="#">
+								Edit Your Profile
+								<i class="fas fa-sliders-h"></i>
+							</a>
+						</div>
+					</div>
+						<div class="dashboard-icon">
+							<i class=" icon fas fa-building"></i>
+						
+						<div>
+							<a href="#">
+								Clear a Room
+								<i class="fas fa-stroopwafel"></i>
+							</a>
+						</div>
+					</div>
+						<div class="dashboard-icon">
+						<i class="icon fab fa-buromobelexperte"></i>
+						<div>
+							<a href="#">
+								Clear a House/Office
+								<i class="fas fa-broom"></i>
+							</a>
+						</div>
+					</div>
+					
+					<div class="dashboard-icon">
+						<i class="icon fas fa-money-bill-wave"></i>
+						<div>
+							<a href="#">
+								View Pending Bills
+								<i class="fas fa-calendar-alt"></i>
+							</a>
+						</div>
+					</div>
+						<div class="dashboard-icon">
+						<i class="icon fas fa-money-bill-wave"></i>
+						<div>
+							<a href="#">
+								Allocate Maintenance
+								<i class="fas fa-cogs"></i>
+							</a>
+						</div>
+					</div>
+					<div class="dashboard-icon logout">
+						<i class="icon fas fa-sign-out-alt"></i>
+						<div>
+							<a href="{{url_for('logout')}}">
+								Logout
+								<i class="fas fa-sign-out-alt"></i>
+							</a>
+						</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	{% endblock %}
